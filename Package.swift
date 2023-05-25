@@ -11,10 +11,13 @@ let package = Package(
             targets: ["MXRNFastCache"]
         )
     ],
+    dependencies: [
+        .package(url: "https://github.com/iammxrn/MRFoundation.git", from: "1.0.0")
+    ],
     targets: [
         .target(
             name: "MXRNFastCache",
-            dependencies: []
+            dependencies: ["MRFoundation"]
         )
     ]
 )
