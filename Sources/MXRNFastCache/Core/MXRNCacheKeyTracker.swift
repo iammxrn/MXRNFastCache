@@ -6,12 +6,14 @@
 //
 
 import Foundation
+import MRFoundation
 
 final class MXRNCacheKeyTracker<Value: MXRNFastCacheValue>: NSObject, NSCacheDelegate {
 
 
     // MARK: - Private Properties
-    
+
+    @UnfairAtomic
     private(set) var keys = Set<Value.Key>()
 
 
